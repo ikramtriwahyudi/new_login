@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_login/home_screen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:new_login/src/features/notification/home/presentation/home_screen.dart';
+import 'package:new_login/src/routes/app_route.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -57,11 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 358,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ));
+                  context.pushNamed(Routes.home);
                 },
                 child: Text("Login"),
                 style: ButtonStyle(

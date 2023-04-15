@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_login/detail_screen.dart';
+import 'package:new_login/src/features/notification/detail/presentation/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
