@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:new_login/src/features/notification/detail/presentation/detail_screen.dart';
+import 'package:new_login/src/routes/app_route.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,12 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromARGB(255, 124, 161, 213)),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailScreen(),
-                      ),
-                    );
+                    context.pushNamed(Routes.detail);
                   },
                   child: ListTile(
                     title: Text("Name"),

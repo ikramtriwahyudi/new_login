@@ -32,11 +32,6 @@ final goRouter = GoRouter(
             ),
           ],
         ),
-        GoRoute(
-          path: 'profile',
-          name: Routes.profile,
-          builder: (context, state) => const DetailScreen(),
-        ),
       ],
     ),
   ],
