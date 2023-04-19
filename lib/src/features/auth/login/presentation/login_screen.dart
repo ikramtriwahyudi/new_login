@@ -14,12 +14,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffbce4fa),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/logo.png",
+              "assets/login.jpg",
               scale: 7,
             ),
             Padding(
@@ -27,13 +28,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   top: 20, bottom: 5, left: 30, right: 30),
               child: TextField(
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
                   prefixIcon: Icon(Icons.account_circle),
                   hintText: "Enter Username",
                   hintStyle: TextStyle(
-                    color: Colors.grey[500],
+                    color: Colors.grey[800],
                   ),
                 ),
               ),
@@ -43,13 +46,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   top: 10, bottom: 30, left: 30, right: 30),
               child: TextField(
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
                   prefixIcon: Icon(Icons.key),
                   hintText: "Enter Password",
                   hintStyle: TextStyle(
-                    color: Colors.grey[500],
+                    color: Colors.grey[800],
                   ),
                 ),
               ),
@@ -61,7 +66,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   context.pushNamed(Routes.home);
                 },
-                child: Text("Login"),
+                child: Text(
+                  "Login",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(

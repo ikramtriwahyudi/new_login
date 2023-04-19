@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -21,18 +20,14 @@ class _DetailScreenState extends State<DetailScreen> {
         children: [
           Center(
             child: Image.asset(
-              "assets/logo1.png",
-              scale: 2,
+              "assets/notif.jpg",
+              scale: 6,
             ),
           ),
           Text(
-            "Get Notificasions",
+            "No Notification",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Icon(Icons.arrow_right_alt_sharp),
-          )
         ],
       ),
     );

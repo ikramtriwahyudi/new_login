@@ -13,30 +13,23 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 115, top: 100),
-            child: Text(
-              "Notifications",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),
-            ),
-          ),
-          for (int i = 0; i < 3; i++)
-            Padding(
-              padding: const EdgeInsets.only(top: 15, right: 30, left: 30),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color.fromARGB(255, 124, 161, 213)),
+      appBar: AppBar(
+        title: Text("Notification"),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            for (int i = 0; i < 10; i++)
+              Padding(
+                padding: const EdgeInsets.only(top: 15, right: 10, left: 10),
                 child: GestureDetector(
                   onTap: () {
                     context.pushNamed(Routes.detail);
                   },
                   child: ListTile(
-                    title: Text("Name"),
-                    subtitle: Text("Descripsion"),
+                    title: Text("Siswa Name"),
+                    subtitle: Text("tanggal hari ini"),
                     leading: Icon(
                       Icons.account_circle,
                       size: 45,
@@ -44,9 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     trailing: Icon(Icons.dehaze_outlined),
                   ),
                 ),
-              ),
-            )
-        ],
+              )
+          ],
+        ),
       ),
     );
   }
